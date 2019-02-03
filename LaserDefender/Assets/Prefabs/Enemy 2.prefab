@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 8002038097835867301}
   - component: {fileID: 8002038097835867302}
   - component: {fileID: 5931763134958212304}
-  - component: {fileID: 3524708296505324436}
-  - component: {fileID: 1183992049813832718}
+  - component: {fileID: 5170356836967811994}
+  - component: {fileID: 7601566747178939135}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Enemy 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8002038097835867303}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.03, y: 5.17, z: 0}
+  m_LocalPosition: {x: 0.045, y: 5.17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 796ba31014ffc7f408e4a121f3f3c021, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 67419d72b31c2634a90412db3ac06ecf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waypoints: []
   path: {fileID: 0}
---- !u!114 &3524708296505324436
+--- !u!114 &5170356836967811994
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,11 +112,11 @@ MonoBehaviour:
   shotCounter: 0
   minTimeBetweenShots: 0.2
   maxTimeBetweenShots: 3
-  LaserPrefab: {fileID: 7787528023522595720, guid: db7847ed6b8f7114d823421102f3758a,
+  LaserPrefab: {fileID: 7787528023522595720, guid: 9faadbe3206069c48a63d13d2ca3674a,
     type: 3}
   projectileSpeed: 10
---- !u!61 &1183992049813832718
-BoxCollider2D:
+--- !u!58 &7601566747178939135
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -128,16 +128,6 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.08589649}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.93, y: 0.84}
-    newSize: {x: 0.93, y: 0.84}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: -0.019704372, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.32820702}
-  m_EdgeRadius: 0
+  m_Radius: 0.3802956
