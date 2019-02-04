@@ -13,7 +13,9 @@ GameObject:
   - component: {fileID: 5931763134958212304}
   - component: {fileID: 3524708296505324436}
   - component: {fileID: 1183992049813832718}
-  m_Layer: 0
+  - component: {fileID: 5222896593511245768}
+  - component: {fileID: 4081226071201010247}
+  m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +116,13 @@ MonoBehaviour:
   maxTimeBetweenShots: 3
   LaserPrefab: {fileID: 7787528023522595720, guid: db7847ed6b8f7114d823421102f3758a,
     type: 3}
+  ExplosionPrefab: {fileID: 3330614136259021911, guid: f498b68dd7d421046a28d01a34f2625a,
+    type: 3}
   projectileSpeed: 10
+  LaserSound: {fileID: 8300000, guid: eb71b43dbbdc89848a5810fb15a463c7, type: 3}
+  DeathSound: {fileID: 8300000, guid: 50edfa9a027a03a4389b1a93033da5b5, type: 3}
+  lasersoundvolume: 0.2
+  deathsoundvolume: 0.1
 --- !u!61 &1183992049813832718
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -125,7 +133,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.08589649}
@@ -141,3 +149,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.32820702}
   m_EdgeRadius: 0
+--- !u!50 &5222896593511245768
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8002038097835867303}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &4081226071201010247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8002038097835867303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f27e9123ce96742469260cee24e32c65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 200
